@@ -1,8 +1,9 @@
 class CreateJobs < ActiveRecord::Migration
   def change
     create_table :jobs do |t|
-
-      t.timestamps null: false
-    end
+		  t.text :title
+		  t.text :description
+		  t.timestamps
+		end
   end
 end
