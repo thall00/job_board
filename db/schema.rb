@@ -14,8 +14,10 @@
 ActiveRecord::Schema.define(version: 20150409051245) do
 
   create_table "jobs", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "title"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
