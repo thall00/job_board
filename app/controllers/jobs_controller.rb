@@ -8,6 +8,13 @@ class JobsController < ApplicationController
 		@job = Job.new
 	end
 
+	def destroy
+		@job = Job.find(params[:id])
+		@job.destroy
+		redirect_to jobs_path
+
+	end
+
 	def create
 	  Job.create(job_params)
 	  redirect_to jobs_path
